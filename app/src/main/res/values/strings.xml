@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">扇贝浮窗</string>
+    <string name="a11y_desc">读取扇贝单词界面上正在学习的英文单词，并在浮动窗口中显示按你的模板生成的讲解。本服务只识别屏幕上的单词文本，不收集、不上传其他内容。</string>
+</resources>

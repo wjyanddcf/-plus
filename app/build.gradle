@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.shanbaylens'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.shanbaylens"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            // 这里没有配置签名，release 需要你自己加 signingConfig 才能装到手机上。
+            // 日常使用直接装 debug APK 即可。
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    // 截屏 OCR 用的离线拉丁文识别模型（自带模型，不依赖 Google Play 服务）
+    implementation 'com.google.mlkit:text-recognition:16.0.0'
+}
